@@ -25,113 +25,206 @@
 </head>
 
 <body>
-		<div class="reveal">
-			<div class="slides">
-				<section id="init">
-					<h1>Welcome</h1>
-					<span>My name is: ########</span><br>
-					<span>My social links are:</span><br>
-					<ul>
-						<li class="linkedin">LinkedIn: #####</li>
-						<li class="github">GitHub: #####</li>
-						<li class="gmail">GMail: #####</li>
-					</ul>
-				</section>
-				<section id="mark_down" data-markdown>
-					<textarea data-template>
-						## Page title
-						A paragraph with some text and a [link](http://hakim.se).
-					</textarea>
-				</section>
-				<section>
-					<ul>
-						<li>press F to fullscreen</li>
-						<li>press S to display speaker view</li>
-						<li>press B to freeze window</li>
-						<li>press O or ESC to display overview</li>
-					</ul>
-				</section>
-				<section data-markdown>
-					<textarea data-template>
-						#### Some code from markdown
-						```python
-						s = "Python syntax highlighting"
-						print s
-						```
-					</textarea>
-				</section>
-				<section>
-					<span>Code from 'pre' and 'code' tags</span>
-					<pre><code class="hljs" data-trim data-line-numbers>
- #id_tag {
-  attr1: value;
-  attr2: value;
-}
-					</code></pre>
-				</section>
-				<section>
-					<pre><code class="hljs" data-trim data-line-numbers="5,9-12">
-import React, { useState } from 'react';
 
-function Example() {
-  const [count, setCount] = useState(0);
+<div class="reveal">
+	<div class="slides">
 
-  return (
-    <div>
-      <p>You clicked {count} times</p>
-      <button onClick={() => setCount(count + 1)}>
-      Click me
-      </button>
-    </div>
-  );
-}
-					</code></pre>
-				</section>
-				<section>
-					<pre><code class="hljs" data-trim data-noescape data-line-numbers="5,9-12">
-import React, { useState } from 'react';
+		<section id="home">
+			<h1>TALLER DJANGO</h1>
+			<img class="img_pet" src="./assets/djangopet.png" alt="Pet">
+		</section>
+		<section id="que-es" data-markdown>
+			<textarea data-template>
+				## ¿Qué es Django?
+				Django es un framework web de alto nivel que permite el desarrollo rápido de sitios web y que contribuye a escribir software:
+				- Completo
+				- Versátil
+				- Seguro
+				- Escalable
+				- Mantenible
+				- Portable
+				<aside class="notes">
+					Completo: principios de diseño consistentes<br>
+					Versátil: usado para construir casi cualquier tipo de sitio web<br>
+					Seguro: ejm. administrar cuentas de usuario y contraseñas<br>
+					Escalable: cada parte de la arquitectura es independiente de las otras<br>
+					Mantenible: agrupación de la funcionalidad relacionada en "aplicaciones" reutilizables<br>
+					Portable: Python se ejecuta en muchas plataformas<br>
+				</aside>
+			</textarea>
+		</section>
+		<section id="patron">
+			<section id="mvt">
+				<h2>Patrón</h2>
+				<img src="./assets/mtv_drawing1.png" alt="MVT" width="600px">
+			</section>
+			<section id="mvt-full">
+				<h2>Patrón</h2>
+				<img src="./assets/mtv_drawing2.png" alt="MVT FULL" width="600px">
+			</section>
+		</section>
+		<section id="lts" data-markdown>
+			<textarea data-template>
+				## Versiones
+				![Django LTS](https://static.djangoproject.com/img/release-roadmap.688d8d65db0b.png)
+			</textarea>
+		</section>
 
-function Example() {
-  const [count, setCount] = useState(0);
+		<section id="get-python-pip">
+			<section id="get-python">
+				<h3>Instalando python 3</h3>
+				<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/1024px-Python-logo-notext.svg.png" alt="python"><br>
+				<a target="_blank" href="https://www.python.org/downloads/"><strong>Sitio oficial</strong></a>
+			</section>
+			<section id="get-python-windows" data-markdown>
+				<textarea data-template>
+					### WINDOWS
+					``` $ py -3 -V ```<br><br>
+					``` $ pip3 list ```
+					> Puede que necesites añadir al path de tu sistema, si en caso python no puede ser encontrado.
+				</textarea>
+			</section>
+			<section id="get-python-linux" data-markdown>
+				<textarea data-template>
+					### LINUX
+					``` $ python3 -V ```<br><br>
+					``` $ sudo apt-get install python3-pip ```
+				</textarea>
+			</section>
+			<section id="get-python-macos" data-markdown>
+				<textarea data-template>
+					### MACOS
+					``` $ python3 -V ```<br><br>
+  				``` $ pip3 list ```
+				</textarea>
+			</section>
+		</section>
+		<section id="get-virtualenv">
+			<section id="get-env" data-markdown>
+				<textarea data-template>
+					### INSTALANDO ENTORNO VIRTUAL
+					El entorno es una instalación de Django en tu computadora local que puedes usar para desarrollar y probar apps Django antes de desplegarlas en producción.
+				</textarea>
+			</section>
+			<section id="get-env-windows" data-markdown>
+				<textarea data-template>
+					### WINDOWS
+					``` $ pip3 install virtualenvwrapper-win ```
+				</textarea>
+			</section>
+			<section id="get-env-linux" data-markdown>
+				<textarea data-template>
+					### LINUX
+					``` $ sudo pip3 install virtualenvwrapper ```<br><br>
+					Añadir al final del archivo ***.bashrc***
+					```
+					export WORKON_HOME=$HOME/.virtualenvs
+					export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
+					export PROJECT_HOME=$HOME/Devel
+					source /usr/local/bin/virtualenvwrapper.sh
+					```
+					Recargar el fichero: ``` $ source ~/.bashrc ```
 
-  return (
-    <div>
-      <p>You clicked {count} times</p>
-      <button onClick={() => setCount(count + 1)}>
-      Click me
-      </button>
-    </div>
-  );
-}
-					</code></pre>
-				</section>
-				<section>
-					<a href="#init">Go init</a>
-					<aside class="notes">
-						Here are some notes. They'll be hidden in your presentation, but you can see them if you open the speaker notes window (hit »S« on your keyboard).
-					</aside>
-				</section>
-				<section id="oses">
-					<section>on Mac</section>
-					<section>on Linux</section>
-					<section>on Windows</section>
-				</section>
-				<section>Next to OS</section>
-			</div>
-		</div>
+					```
+					virtualenvwrapper.user_scripts creating /home/ubuntu/.virtualenvs/premkproject
+					virtualenvwrapper.user_scripts creating /home/ubuntu/.virtualenvs/postmkproject
+					...
+					virtualenvwrapper.user_scripts creating /home/ubuntu/.virtualenvs/preactivate
+					virtualenvwrapper.user_scripts creating /home/ubuntu/.virtualenvs/postactivate
+					virtualenvwrapper.user_scripts creating /home/ubuntu/.virtualenvs/get_env_details
+					```
+				</textarea>
+			</section>
+			<section id="get-env-macos" data-markdown>
+				<textarea data-template>
+					### MACOS
+					``` $ sudo pip3 install virtualenvwrapper ```<br><br>
+					Añadir al final del archivo ***.bash_profile***
+					```
+					export WORKON_HOME=$HOME/.virtualenvs
+					export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
+					export PROJECT_HOME=$HOME/Devel
+					source /usr/local/bin/virtualenvwrapper.sh
+					```
+
+					Recargar el fichero:<br>
+					``` $ source ~/.bash_profile ```
+				</textarea>
+			</section>
+		</section>
+		<section id="set-virtualenv">
+			<section id="set-env" data-markdown>
+				<textarea data-template>
+					### Creando entorno virtual
+					``` $ mkvirtualenv my_env ```
+				</textarea>
+			</section>
+			<section id="commands-env" data-markdown>
+				<textarea data-template>
+					#### Uso del entorno virtual
+					> |||
+					> | ---------------------------- | ----------------------------------- |
+					> |Salir del entorno virtual     | ```$ deactivate```                  |
+					> |Listar los entornos virtuales | ```$ workon```                      |
+					> |Activar el entorno virtual    | ```$ workon my_env```       |
+					> |Eliminar un entorno           | ```$ rmvirtualenv my_env``` |
+					> |||
+				</textarea>
+			</section>
+		</section>
+		<section id="get-django">
+			<section id="install-django" data-markdown="">
+				<textarea data-template>
+					### INSTALANDO DJANGO
+					Con el entorno virtual activo
+					``` (my_env) $ pip3 install django==2.2 ```
+				</textarea>
+			</section>
+			<section id="check-django" data-markdown>
+				<textarea data-template>
+					### COMPROBANDO LA INSTALACIÓN
+					#### WINDOWS
+					``` (my_env) $ py -3 -m django --version ```<br><br>
+					#### LINUX / MACOS
+					``` (my_env) $ python3 -m django --version ```
+				</textarea>
+			</section>
+		</section>
+
+		<section id="set-django" data-markdown>
+			<textarea data-template>
+				### INICIANDO UN PROYECTO EN DJANGO
+				``` (my_env) $ django-admin startproject my_site_django ```
+			</textarea>
+		</section>
+				
+		<section id="close" data-markdown>
+			<textarea data-template="">
+				##### Manos a la obra
+				## [Let's to code!](#home)
+			</textarea>
+			<!-- <a href="#home">Let's code</a> -->
+		</section>
+
+	</div>
+</div>
 
 
 <style>
-.linkedin {
-	color: blue;
+#home .img_pet {
+	border: none;
+	background: none;
 }
-.github {
-	color: gray;
+#home h1 {
+	font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-.gmail {
-	color: red;
+#get-python img {
+	border: none;
+	background: none;
+	width: 40%;
 }
 </style>
+
 <script src="./js/reveal.js"></script>
 <script>
 	Reveal.initialize({
@@ -139,7 +232,7 @@ function Example() {
 		hash: true,
 		history: true,
 		transition: 'slide',
-		parallaxBackgroundImage: 'https://images.pexels.com/photos/633409/pexels-photo-633409.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
+		parallaxBackgroundImage: 'https://images.pexels.com/photos/698327/pexels-photo-698327.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
 		parallaxBackgroundSize: '2100px 900px',
 		dependencies: [
 			// Interpret Markdown in <section> elements
